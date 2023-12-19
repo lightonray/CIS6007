@@ -1,0 +1,16 @@
+C:\Users\Administrator\source\repos\ExamCIS6007\bin\Debug\net5.0\ExamCIS6007.exe
+C:\Users\Administrator\source\repos\ExamCIS6007\bin\Debug\net5.0\ExamCIS6007.deps.json
+C:\Users\Administrator\source\repos\ExamCIS6007\bin\Debug\net5.0\ExamCIS6007.runtimeconfig.json
+C:\Users\Administrator\source\repos\ExamCIS6007\bin\Debug\net5.0\ExamCIS6007.runtimeconfig.dev.json
+C:\Users\Administrator\source\repos\ExamCIS6007\bin\Debug\net5.0\ExamCIS6007.dll
+C:\Users\Administrator\source\repos\ExamCIS6007\bin\Debug\net5.0\ref\ExamCIS6007.dll
+C:\Users\Administrator\source\repos\ExamCIS6007\bin\Debug\net5.0\ExamCIS6007.pdb
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.dll
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ref\ExamCIS6007.dll
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.pdb
+C:\Users\Administrator\source\repos\ExamCIS6007\obj\Debug\net5.0\ExamCIS6007.genruntimeconfig.cache

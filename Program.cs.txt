@@ -1,0 +1,90 @@
+﻿using System;
+using System.Threading;
+
+namespace ExamCIS6007
+{
+    class Program
+    {
+        static int[] arr;
+        const int N = 250;
+        static bool numberFound = false;
+        static object lockObject = new object();
+        static void Main(string[] args)
+        {
+            int arraySize = 10000;
+            arr = new int[arraySize];
+            Random randomnumber = new Random();
+
+            // Generate random array and shuffle it
+            for (int i = 0; i < arraySize; i++)
+            {
+                arr[i] = randomnumber.Next(1000); // Adjust the range as needed
+            }
+            ShuffleArray(arr);
+
+            // Define the number of threads
+            int numberOfThreads = 8; // Change this value to set the number of threads
+
+            StartThreads(numberOfThreads);
+
+            Console.ReadLine();
+        }
+
+
+        // Shuffles array based on random index
+        static void ShuffleArray(int[] array)
+        {
+            Random rand = new Random();
+            int n = array.Length;
+            while (n > 1)
+            {
+                n--;
+                int k = rand.Next(n + 1);
+                int temp = array[k];
+                array[k] = array[n];
+                array[n] = temp;
+            }
+        }
+
+
+        // Define the number of threads
+        static void StartThreads(int numberOfThreads)
+        {
+            Thread[] threads = new Thread[numberOfThreads];
+            int segmentSize = arr.Length / numberOfThreads;
+
+            for (int i = 0; i < numberOfThreads; i++)
+            {
+                int start = i * segmentSize;
+                int end = (i == numberOfThreads - 1) ? arr.Length : (i + 1) * segmentSize;
+                threads[i] = new Thread(() => FindNumberGreaterThanN(start, end));
+                threads[i].Name = $"Thread {i + 1}";
+                threads[i].Start();
+            }
+        }
+
+
+        // Main function + lock implementation for threads
+        static void FindNumberGreaterThanN(int start, int end)
+        {
+            if (numberFound) return; // Check if number is already found by another thread
+
+            for (int i = start; i < end; i++)
+            {
+                if (arr[i] > N)
+                {
+                    lock (lockObject)
+                    {
+                        if (!numberFound)
+                        {
+                            Console.WriteLine($"First number greater than {N} found by {Thread.CurrentThread.Name}: {arr[i]}");
+                            numberFound = true;
+                        }
+                    }
+                    break; // Stop searching when number is found
+                }
+            }
+        }
+
+    }
+}
